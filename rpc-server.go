@@ -37,7 +37,7 @@ func rpcListen() {
 }
 
 func (r *RPCServerCallback) LogInfo(payload common.RPCPayload, resp *string) error {
-	log.Println(payload)
-	*resp = "Processed payload via RPC: " + payload.Name
+	log.Println("Message received => ", payload)
+	*resp = "Processed payload via RPC"
 	return nil
 }

@@ -23,5 +23,6 @@ func sendMessageViaRPC() {
 
 	err = client.Call("RPCServerCallback.LogInfo", rpcPayload, &result)
 	common.Check(err)
-	log.Println("rpc message sent!")
+	log.Println("RPC message sent!")
+	log.Println("Message from server =>", result)
 }
